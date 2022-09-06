@@ -58,9 +58,10 @@ public class Course {
      */
     public String getLectureTime() {
         // TODO 20
-        String AMPM = hour / 12 >= 1 ? "AM" : "PM";
-        String h = Integer.toString((hour/12));
-        String TimetoString = h + ":" + Integer.toString(min) + AMPM;
+        String AMPM = hour / 12 >= 1 ? "PM" : "AM";
+        String h = String.format("%02d",(hour/12) >=1 ? (hour/12) : hour);
+        String m = String.format("%02d",min);
+        String TimetoString = h + ":" + m + AMPM;
         return TimetoString;
     }
 
@@ -122,8 +123,8 @@ public class Course {
         if(!students.contains(s))return false;
         else{
             students.remove(s);
+            return true;
         }
-        return false;
     }
 
     /**
@@ -131,6 +132,6 @@ public class Course {
      */
     public void print() {
         System.out.printf("%-40s%-12s%-20s%-40s",
-                name, hour, min, prof, location);
+                name, getLectureTime(), prof, location);
     }
 }
