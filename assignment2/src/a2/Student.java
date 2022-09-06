@@ -38,7 +38,7 @@ public class Student {
     /** The first and last name of this Student in the format "First Last". */
     public String fullName() {
         // TODO 5
-        return firstName + lastName;
+        return firstName +" "+ lastName;
     }
 
     /** The year in school this Student is in. */

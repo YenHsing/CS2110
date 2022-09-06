@@ -1,0 +1,24 @@
+help
+addstudent Joe Smith 2
+addstudent Bill Nye 3
+addstudent Andy Li 3
+addstudent Cathy Liu 4
+addstudent Willy Hou 1
+addstudent Robert Chang 2
+students
+addcourse OOP Gries Statler 23:00
+addcourse FunctionalProgramming Clarkson Kennedy 9:25
+courses
+enroll 0 0
+enroll 1 0
+enroll 2 0
+enroll 2 1
+enroll 3 1
+enroll 4 1
+enroll 5 1
+enrollment 0
+enrollment 1
+drop 1 0
+drop 0 0
+enrollment 0
+exit

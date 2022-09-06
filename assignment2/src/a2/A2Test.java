@@ -6,18 +6,10 @@ public class A2Test {
     public static void main(String[] args) {
         testEmptyList();
         testAppend();
-        // TODO Add more tests to thoroughly test StudentList
-        //
-        // The methods provided do not necessarily test everything in each
-        // case.  You will need to add more to the existing testing procedures
-        // as well as add new testing procedures.  You can also add tests to
-        // test the Course and Student classes.
-        // 
-        // Try to keep tests small and test features as independently as
-        // possible.
-        //testContains();
+        testContains();
         testRemove();
         testGet();
+        testSizeandAppend();
     }
 
     public static void testEmptyList() {
@@ -84,9 +76,28 @@ public class A2Test {
         list.append(a);
         list.append(b);
         list.append(s);
-        System.out.println("list.get(2).toString() = " + list.get(2).toString());
+        System.out.println("list.get(2) = " + list.get(2));
         System.out.println("expected = BillNye");
     }
 
+    public static void testSizeandAppend(){
+        StudentList list = new StudentList();
+        Student s = new Student("Bill", "Nye", 4);
+        Student a = new Student("Andy", "Li", 4);
+        Student b = new Student("Cathy", "Lin", 3);
+        Student c = new Student("Bill", "Chang", 2);
+        Student d = new Student("Leo", "kim", 1);
+        Student e = new Student("Issac", "Wang", 3);
+        list.append(a);
+        list.append(b);
+        list.append(s);
+        list.append(c);
+        list.append(d);
+        list.append(e);
+        System.out.println("list.size() = " + list.size());
+        System.out.println("expected = 6");
+        System.out.println("list.get(5) = " + list.get(5));
+        System.out.println("expected = Issac Wang");
+    }
 
 }

@@ -88,7 +88,8 @@ public class Course {
         //TODO 23
         String s = new String();
         for(int i = 0; i < students.size(); i++){
-            if(students!=null)s += students.get(i).toString();
+            if(students.get(i)!=null)s += students.get(i).toString();
+            s+=" ";
         }
         return s;
     }
